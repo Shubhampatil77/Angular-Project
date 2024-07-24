@@ -1,0 +1,134 @@
+<p>second works!</p>
+<h1>{{ title }}</h1>
+
+<div class="mycontainer">
+  <div class="First">
+    <form  [formGroup]="myForm" (submit)="onSubmit()">
+      <div class="nm">
+        <div class="col-10">First Name:</div>
+        <div class="col-20">
+          <input type="text" id="fname" name="fname" formControlName="fname" />
+          <div *ngIf="submitstatus && !fname" class="invalid-feedback" style="color: red">
+            Name number is required
+          </div>
+        </div>
+      </div>
+
+      <div class="nm">
+        <div class="col-10">Last Name :</div>
+        <div class="col-20">
+          <input type="text" id="lname" name="lname" formControlName="lname" required />
+          <div *ngIf="submitstatus && !lname" class="invalid-feedback" style="color: red">
+            Last Name number is required
+          </div>
+        </div>
+      </div>
+
+      <div class="nm">
+        <div class="col-10">Contact:</div>
+        <div class="col-20">
+          <input type="tel" id="contact" name="contact" formControlName="contact" required minlength="10" maxlength="10"
+            pattern="[0-9]*" />
+          <div *ngIf="submitstatus && !contact" class="invalid-feedback" style="color: red">
+            Contact number is required
+          </div>
+          <div *ngIf="submitstatus && contact && contact.length !== 10" class="invalid-feedback" style="color: red">
+            Contact number must have 10 digits
+          </div>
+        </div>
+      </div>
+      <div class="nm">
+        <div class="col-10">Address:</div>
+
+        <div class="col-20">
+          <input type="text" id="fname" name="fname" formControlName="address" required /><br />
+          <div *ngIf="submitstatus && !address" class="invalid-feedback" style="color: red">
+            Contact number is required
+          </div>
+        </div>
+      </div>
+
+      <div class="nm">
+        <div class="col-10">Email:</div>
+
+        <div class="col-20">
+          <input type="email" id="email" name="email" formControlName="email" required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+          <div *ngIf="submitstatus && !email" class="invalid-feedback" style="color: red">
+            Email is required
+          </div>
+          <div *ngIf="submitstatus" class="invalid-feedback" style="color: red">
+          </div>
+        </div>
+      </div>
+      <div class="nm">
+        <div class="col-10">Pin:</div>
+
+        <div class="col-20">
+          <input type="text" id="pin" name="pin" formControlName="pin" required minlength="6" maxlength="6"
+            pattern="[0-9]*" />
+          <div *ngIf="submitstatus && !pin" class="invalid-feedback" style="color: red">
+            Pin Code is required
+          </div>
+          <div *ngIf="submitstatus && pin && pin.length !== 6" class="invalid-feedback" style="color: red">
+            Pin Code must have exactly 6 digits
+          </div>
+        </div>
+      </div>
+      <div class="nm">
+        <div class="col-10">Password:</div>
+
+        <div class="col-20">
+          <input type="password" id="password" name="password" formControlName="password" required minlength="8"
+            maxlength="10" />
+          <div *ngIf="submitstatus && !password" class="invalid-feedback" style="color: red">
+            Password is required
+          </div>
+          <div *ngIf="submitstatus && password" class="invalid-feedback" style="color: red">
+          
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Submit" [disabled]="myForm.invalid" (click)="onSubmit()" style="margin-left: 120px" />
+
+    </form>
+  </div>
+
+  <div *ngIf="submitstatus" class="Second">
+    <table>
+      <tr>
+        <td> First Name</td>
+        <td>{{ fname }} </td>
+      </tr>
+      <tr>
+        <td> Last Name</td>
+        <td> {{ lname }}</td>
+      </tr>
+      <tr>
+        <td> Contact</td>
+        <td> {{ contact }}</td>
+      </tr>
+      <tr>
+        <td> Address</td>
+        <td> {{ address }}</td>
+      </tr>
+      <tr>
+        <td>Email </td>
+        <td> {{ email }}</td>
+      </tr>
+      <tr>
+        <td>Pin </td>
+        <td> {{ pin }}</td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td>{{ password }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+  
+<button routerLink="/about">About</button>
+
+<button routerLink="/home">Home</button>
+

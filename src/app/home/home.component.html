@@ -1,0 +1,39 @@
+<h1>hello Second Component</h1>
+<div class="mycontainer">
+    <div class="f2">
+
+      <h4>Name:<input type="text" id="fname" [(ngModel)]="name" name="fname" value="" /><br /></h4>
+      <h4>Contact :<input type="text" id="dcontact" [(ngModel)]="contact" name="dcontact" value="dcontact" /><br /></h4>
+      <h4>Address :<input type="text" id="daddress" [(ngModel)]="address" name="daddress" value="daddress" /><br /></h4>
+      <h4>Email :<input type="text" id="demail" [(ngModel)]="email" name="demail" value="" /><br/></h4>
+      <h4>Pin :<input type="text" id="dpin" [(ngModel)]="pin" name="dpin" value="dpin" /><br /></h4>
+
+      <button (click)="doAdd()">Add</button>
+      <button (click)="doShow()">Show</button> 
+    
+    </div><div *ngFor="let i of localNamee">
+      <div class="s2">
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>{{ i.sname }}</td>
+          </tr>
+          <tr>
+            <td>Contact</td>
+            <td>{{ i.contact }}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>{{ i.address }}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{ i.email }}</td>
+          </tr>
+          <tr>
+            <td>Pin</td>
+            <td>{{ i.pin }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>

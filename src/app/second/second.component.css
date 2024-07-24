@@ -1,0 +1,44 @@
+div.mycontainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  
+  div.col-20 {
+    font-size: 15px;
+  }
+  
+  div.col-10 {
+    font-size: 20px;
+  }
+  
+  div.mycontainer div.First {
+    width: 33%;
+    float: right;
+  }
+  
+  div.nm {
+    margin: 8%;
+    font: bold;
+    font-size: medium;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande","Lucida Sans", Arial, sans-serif;
+  }
+  
+  div.nm.input {
+    height: max-content;
+  }
+  
+  table,
+  th,
+  td {
+    font-weight: bold;
+    table-layout: fixed;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 80%;
+    height: 50px;
+  }
+  
+  th:nth-child(even),
+  td:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+  }

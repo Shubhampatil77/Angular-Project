@@ -1,0 +1,33 @@
+.all
+{
+    background-image: url('/assets/1.png');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+
+}
+.btn {
+    color: rebeccapurple;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  button {
+    width: 250px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #3498db; /* Blue color, you can change it to your preferred color */
+    color: #ffffff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9; /* Darker shade of blue on hover */
+  }
+  

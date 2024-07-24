@@ -1,0 +1,20 @@
+div.mycontainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  
+table,
+th,
+td {
+  font-weight: bold;
+  table-layout: fixed;
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 80%;
+  height: 50px;
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
