@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/about",
+    "/first-component",
+    "/home",
+    "/login",
+    "/register",
+    "/report",
+    "/second-component"
+  ]
+}
